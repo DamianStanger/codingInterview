@@ -11,7 +11,8 @@ namespace ShapeTests
         [Test]
         public void AreaShouldReturnWidthSquared()
         {
-            IShape square = new Square(3);
+            const double width = 3;
+            IShape square = new Square(width);
             square.Area.Should().Be(9);
         }
 
@@ -19,9 +20,9 @@ namespace ShapeTests
         public void CanCalculateTotalArea()
         {
             IList<IShape> shapes = new List<IShape>();
-//            shapes.Add(new Square(1));
-//            shapes.Add(new Square(2));
-//            shapes.Add(new Square(3));
+            shapes.Add(new Square(1));
+            shapes.Add(new Square(2));
+            shapes.Add(new Square(3));
 
 
             double combinedArea = 0;

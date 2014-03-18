@@ -1,0 +1,14 @@
+﻿namespace shapes
+{
+    public class Square : IShape
+    {
+        
+
+        public Square(double width)
+        {
+            Area = width * width;
+        }
+
+        public double Area { get; private set; }
+    }
+}
