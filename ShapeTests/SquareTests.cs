@@ -16,7 +16,7 @@ namespace ShapeTests
             square.Area.Should().Be(9);
         }
 
-        [Test, Ignore]
+        [Test]
         public void CanCalculateTotalArea()
         {
             IList<IShape> shapes = new List<IShape>();
@@ -25,10 +25,11 @@ namespace ShapeTests
             shapes.Add(new Square(3));
 
 
-            double combinedArea = 0;
+            var shapeProcessor = new ShapeProcessor();
+            double combinedArea = shapeProcessor.CombineAreaOf(shapes);
 
 
-            combinedArea.Should().Be(15);
+            combinedArea.Should().Be(14);
         }
     }
 }
