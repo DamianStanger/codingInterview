@@ -41,7 +41,7 @@
   <ItemGroup>
     <Compile Include="IShape.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShapeProcessor.cs" />
+    <Compile Include="ShapeService.cs" />
     <Compile Include="Square.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

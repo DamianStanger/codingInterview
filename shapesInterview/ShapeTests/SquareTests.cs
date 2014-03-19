@@ -25,7 +25,7 @@ namespace ShapeTests
             shapes.Add(new Square(3));
 
 
-            var shapeProcessor = new ShapeProcessor();
+            var shapeProcessor = new ShapeService();
             double combinedArea = shapeProcessor.CombineAreaOf(shapes);
 
 
