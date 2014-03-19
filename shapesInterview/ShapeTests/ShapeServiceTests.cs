@@ -17,11 +17,11 @@ namespace ShapeTests
             const int shapeThreePerimeter = 12;
 
             IList<IShape> shapes = new List<IShape>();
-
             //add shapes
 
+
             //call method 
-            var totalParimeter = 0d;
+            double totalParimeter = 0d;
 
             //assert result
             totalParimeter.Should().Be(shapeOnePerimeter + shapeTwoPerimeter + shapeThreePerimeter);
