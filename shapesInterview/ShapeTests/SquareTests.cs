@@ -24,7 +24,7 @@ namespace ShapeTests
 //            shapes.Add(new Square(3));
 
 
-            double combinedArea = 0;
+            var combinedArea = 0d;
 
 
             combinedArea.Should().Be(15);
