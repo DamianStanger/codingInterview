@@ -11,8 +11,13 @@ namespace ShapeTests
         [Test]
         public void AreaShouldReturnWidthSquared()
         {
-            IShape square = new Square(3);
-            square.Area.Should().Be(9);
+            double width = 3;
+            IShape square = new Square(width);
+
+            var actualArea = square.Area;
+
+            var expectedArea = 9;
+            actualArea.Should().Be(expectedArea);
         }
 
         [Test, Ignore]
@@ -27,7 +32,7 @@ namespace ShapeTests
             var combinedArea = 0d;
 
 
-            combinedArea.Should().Be(15);
+            combinedArea.Should().Be(14);
         }
     }
 }

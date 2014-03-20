@@ -17,7 +17,7 @@ namespace ShapeTests
             const int shapeThreePerimeter = 12;
 
             IList<IShape> shapes = new List<IShape>();
-            //add shapes
+            //add shapes, do not reference square within this file, use a mocking framework
 
 
             //call method 
