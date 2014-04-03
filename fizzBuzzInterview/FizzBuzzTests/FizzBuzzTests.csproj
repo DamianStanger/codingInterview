@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuzzTests.cs" />
+    <Compile Include="FizzTests.cs" />
     <Compile Include="IntegrationTest.cs" />
     <Compile Include="MainTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
