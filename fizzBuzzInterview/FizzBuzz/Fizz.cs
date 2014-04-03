@@ -4,7 +4,7 @@
     {
         public string GetReplacement(int number)
         {
-            return number.ToString();
+            return "";
         }
     }
 }
