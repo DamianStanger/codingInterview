@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using FizzBuzz;
@@ -21,8 +22,7 @@ namespace FizzBuzzTests
             var sb = new StringBuilder();
             Console.SetOut(new StringWriter(sb));
             
-            Program.Fizz = new Fizz();
-            Program.Buzz = new Buzz();
+            Program.NumberTesters = new List<INumberTester>(){ new Fizz(), new Buzz()};
 
             Program.Main(args);
             string actual = sb.ToString();
@@ -37,8 +37,7 @@ namespace FizzBuzzTests
             var sb = new StringBuilder();
             Console.SetOut(new StringWriter(sb));
 
-            Program.Fizz = new Fizz();
-            Program.Buzz = new Buzz();
+            Program.NumberTesters = new List<INumberTester>() { new Fizz(), new Buzz() };
 
             Program.Main(args);
             string actual = sb.ToString();

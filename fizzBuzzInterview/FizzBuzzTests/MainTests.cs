@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using ConsoleApp;
@@ -17,8 +18,7 @@ namespace FizzBuzzTests
             MockTester fizz = new MockTester();
             MockTester buzz = new MockTester();
 
-            Program.Fizz = fizz;
-            Program.Buzz = buzz;
+            Program.NumberTesters = new List<INumberTester>() { fizz, buzz };
 
             var args = new[] { "1" };
             Program.Main(args);
@@ -33,8 +33,7 @@ namespace FizzBuzzTests
             MockTester fizz = new MockTester();
             MockTester buzz = new MockTester();
 
-            Program.Fizz = fizz;
-            Program.Buzz = buzz;
+            Program.NumberTesters = new List<INumberTester>() { fizz, buzz };
 
             var args = new[] { "10" };
             Program.Main(args);
@@ -49,8 +48,7 @@ namespace FizzBuzzTests
             MockTester fizz = new MockTester("");
             MockTester buzz = new MockTester("");
 
-            Program.Fizz = fizz;
-            Program.Buzz = buzz;
+            Program.NumberTesters = new List<INumberTester>() { fizz, buzz };
 
             StringBuilder mockConsole = new StringBuilder();
             StringWriter stringWriter = new StringWriter(mockConsole);
@@ -68,8 +66,7 @@ namespace FizzBuzzTests
             MockTester fizz = new MockTester("Fizz");
             MockTester buzz = new MockTester("Buzz");
 
-            Program.Fizz = fizz;
-            Program.Buzz = buzz;
+            Program.NumberTesters = new List<INumberTester>() { fizz, buzz };
 
             StringBuilder mockConsole = new StringBuilder();
             StringWriter stringWriter = new StringWriter(mockConsole);
@@ -87,8 +84,7 @@ namespace FizzBuzzTests
             MockTester fizz = new MockTester("Fizz");
             MockTester buzz = new MockTester("");
 
-            Program.Fizz = fizz;
-            Program.Buzz = buzz;
+            Program.NumberTesters = new List<INumberTester>() { fizz, buzz };
 
             StringBuilder mockConsole = new StringBuilder();
             StringWriter stringWriter = new StringWriter(mockConsole);

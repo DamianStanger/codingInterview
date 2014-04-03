@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using FizzBuzz;
 
 namespace ConsoleApp
@@ -10,27 +12,28 @@ namespace ConsoleApp
             var counter = int.Parse(args[0]);
             for (int i = 1; i <= counter; i++)
             {
-                var f = Fizz.GetReplacement(i);
-                var b = Buzz.GetReplacement(i);
+                var replacement = NumberTesters.Aggregate("", (current, numberTester) => (current + (" " + numberTester.GetReplacement(i))).Trim());
 
-                if (string.IsNullOrEmpty(f) && string.IsNullOrEmpty(b))
+                if (string.IsNullOrEmpty(replacement))
                 {
                     Console.WriteLine(i);
                 }
                 else
                 {
-                    Console.WriteLine((f + " " + b).Trim());
+                    Console.WriteLine(replacement);
                 }
             }
         }
 
         static Program()
         {
-            Fizz = new Fizz();
-            Buzz = new Buzz();
+            NumberTesters = new List<INumberTester>()
+            {
+                new Fizz(), 
+                new Buzz()
+            };
         }
 
-        public static INumberTester Fizz { get; set; }
-        public static INumberTester Buzz { get; set; }
+        public static IEnumerable<INumberTester> NumberTesters { get; set; } 
     }
 }
