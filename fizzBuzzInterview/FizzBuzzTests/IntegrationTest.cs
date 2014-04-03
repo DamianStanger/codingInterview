@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using FizzBuzz;
 using FluentAssertions;
 using NUnit.Framework;
 using ConsoleApp;
@@ -19,6 +20,9 @@ namespace FizzBuzzTests
             var sb = new StringBuilder();
             Console.SetOut(new StringWriter(sb));
             
+            Program.Fizz = new Fizz();
+            Program.Buzz = new Buzz();
+
             Program.Main(args);
             string actual = sb.ToString();
 

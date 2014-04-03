@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Buzz.cs" />
+    <Compile Include="Fizz.cs" />
     <Compile Include="INumberTester.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
