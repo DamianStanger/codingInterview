@@ -12,4 +12,15 @@ There is an integration test that forms the basis of the testing which can test 
 
 Rules of Fizz Buzz are here: [https://en.wikipedia.org/wiki/Bizz_buzz](https://en.wikipedia.org/wiki/Bizz_buzz)
 
-I implemented FizzBuzz here [DamoFizzBuzz](https://github.com/DamianStanger/codingInterview/tree/DamoFizzBuzz) Warning, i used a totally test driven overkill method to this, not the YAGNI agile solution that would make most sense (maybe i'll do that version later).
+I implemented FizzBuzz Twice:
+ * [damoFizzbuzzquick](https://github.com/DamianStanger/codingInterview/tree/damoFizzbuzzquick) quick and basic method
+ * [DamoFizzBuzz](https://github.com/DamianStanger/codingInterview/tree/DamoFizzBuzz) *Warning, i used a totally test driven overkill method to this*
+
+### Some good follow up questions: ###
+* Ask what might go wrong with their solution, for example bad arguments, any exceptions you can see in their logic
+
+* Ask the candidate to ensure the program always accepts one argument. You are looking for a TDD approach here, write the test for zero arguments and ensure it writes out some text to the console instead eg "Please pass only one argument". They should write 2 tests:
+  * 0 args
+  * 2 args
+
+* Then ensure that the arg passed is numeric, again if it is not the program should write "Expected argument should be numeric". 
