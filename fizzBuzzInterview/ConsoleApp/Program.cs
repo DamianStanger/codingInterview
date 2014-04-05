@@ -8,24 +8,28 @@ namespace ConsoleApp
         {
             var target = int.Parse(args[0]);
             var output = "";
+
             for (int i = 1; i <= target; i++)
             {
+                string val;
                 if (i % 3 == 0 && i % 5 == 0)
                 {
-                    output += string.Format("{0} ", "FizzBuzz");
-                    continue;
+                    val = "FizzBuzz";
                 }
-                if (i%3==0)
+                else if (i%3==0)
                 {
-                    output += string.Format("{0} ", "Fizz");
-                    continue;
+                    val = "Fizz";
                 }
-                if (i % 5 == 0)
+                else if (i % 5 == 0)
                 {
-                    output += string.Format("{0} ", "Buzz");
-                    continue;
+                    val = "Buzz";
                 }
-                output += string.Format("{0} ", i);
+                else
+                {
+                    val = i.ToString();
+                }
+
+                output += string.Format("{0} ", val);
             }
             Console.Write(output.Trim());
         }
