@@ -10,33 +10,61 @@ namespace FizzBuzzTests
     [TestFixture]
     public class IntegrationTest
     {
-        private const string OneToThirty = "1\r\n2\r\nFizz\r\n4\r\nBuzz\r\nFizz\r\n7\r\n8\r\nFizz\r\nBuzz\r\n11\r\nFizz\r\n13\r\n14\r\nFizz Buzz\r\n16\r\n17\r\nFizz\r\n19\r\nBuzz\r\nFizz\r\n22\r\n23\r\nFizz\r\nBuzz\r\n26\r\nFizz\r\n28\r\n29\r\nFizz Buzz\r\n";
-        private const string OneToTwo = "1\r\n2\r\n";
+        private StringBuilder _sb;
+        private const string ExpectedTwo = "1 2";
+        private const string ExpectedThree = "1 2 Fizz";
+        private const string ExpectedFive = "1 2 Fizz 4 Buzz";
+        private const string ExpectedThirty = "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz Fizz 22 23 Fizz Buzz 26 Fizz 28 29 FizzBuzz";
 
-        [Test]
-        public void ShouldProduceShortFizzBuzzOutput()
+        [SetUp]
+        public void Setup()
         {
-            var args = new[] { "2" };
-            var sb = new StringBuilder();
-            Console.SetOut(new StringWriter(sb));
-
-            Program.Main(args);
-            string actual = sb.ToString();
-
-            actual.Should().Be(OneToTwo);
+            _sb = new StringBuilder();
+            Console.SetOut(new StringWriter(_sb));
         }
 
         [Test]
-        public void ShouldProduceFullFizzBuzzOutput()
+        public void ShouldProduceNumeric_FizzBuzzOutput()
         {
-            var args = new[] {"30"};
-            var sb = new StringBuilder();
-            Console.SetOut(new StringWriter(sb));
+            var args = new[] { "2" };
 
             Program.Main(args);
-            string actual = sb.ToString();
 
-            actual.Should().Be(OneToThirty);
+            string actual = _sb.ToString();
+            actual.Should().Be(ExpectedTwo);
+        }
+
+        [Test]
+        public void ShouldProduceFizz_FizzBuzzOutput()
+        {
+            var args = new[] { "3" };
+
+            Program.Main(args);
+
+            string actual = _sb.ToString();
+            actual.Should().Be(ExpectedThree);
+        }
+
+        [Test]
+        public void ShouldProduceBuzz_FizzBuzzOutput()
+        {
+            var args = new[] { "5" };
+
+            Program.Main(args);
+            
+            string actual = _sb.ToString();
+            actual.Should().Be(ExpectedFive);
+        }
+
+        [Test]
+        public void ShouldProduceFull_FizzBuzzOutput()
+        {
+            var args = new[] {"30"};
+
+            Program.Main(args);
+
+            string actual = _sb.ToString();
+            actual.Should().Be(ExpectedThirty);
         }        
     }
 }

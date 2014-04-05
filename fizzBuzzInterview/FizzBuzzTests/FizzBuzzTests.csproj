@@ -59,10 +59,6 @@
       <Project>{9e0a3a73-e96d-49f7-8c95-8b23a7f15750}</Project>
       <Name>ConsoleApp</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FizzBuzz\FizzBuzz.csproj">
-      <Project>{bedc8a7f-ff8a-4304-aa95-6f380b877f63}</Project>
-      <Name>FizzBuzz</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
