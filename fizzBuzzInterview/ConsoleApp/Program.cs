@@ -10,6 +10,11 @@ namespace ConsoleApp
             var output = "";
             for (int i = 1; i <= target; i++)
             {
+                if (i%3==0)
+                {
+                    output += string.Format("{0} ", "Fizz");
+                    continue;
+                }
                 output += string.Format("{0} ", i);
             }
             Console.Write(output.Trim());
