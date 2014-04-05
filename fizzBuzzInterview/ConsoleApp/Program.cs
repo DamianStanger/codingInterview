@@ -15,6 +15,11 @@ namespace ConsoleApp
                     output += string.Format("{0} ", "Fizz");
                     continue;
                 }
+                if (i % 5 == 0)
+                {
+                    output += string.Format("{0} ", "Buzz");
+                    continue;
+                }
                 output += string.Format("{0} ", i);
             }
             Console.Write(output.Trim());
