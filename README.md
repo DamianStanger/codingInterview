@@ -1,6 +1,6 @@
 # Coding Interview Frameworks #
 
-Sample C# solutions to form a basis of code interviews
+.net solutions designed to be a basis for code interviews
 
 ## Shapes Interview (Basic C#) ##
 This solution is designed to test very basic knowledge of C#. It does use unit tests using nunit, but the candidate does not really need to know about unit testing or nunit to do this.
@@ -30,4 +30,4 @@ I implemented FizzBuzz Twice:
   * if they used an int (max int +1) if a long (max long +1)
 
 ### Advanced follow up: ###
- * Every time the program is run it is to write the result string to a DB, but we are not going to write the DB code yet (another team is writing that), so they need to write a test that tests a call to the DB is made through an interface with the correct data, they can use a mocking framework if they like, or a test double its upto them.
+ * Scenario: Every time the program is run it is to write the resulting string to a data base. We are not going to write the DB code yet (another team is writing that), we need to write a test that ensures a call to the DB is made through an interface with the correct data, they can use a mocking framework if they like, or a test double, its upto them. But do they know what to do? and can they do real TDD?
