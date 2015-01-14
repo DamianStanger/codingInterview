@@ -19,6 +19,8 @@ I implemented FizzBuzz Twice:
 ### Some good follow up questions: ###
 * Ask what might go wrong with their solution, for example bad arguments, any exceptions you can see in their logic
 
+* Add the requirement for 3 and 5 FizzBuzz, do they do try and do TDD or jump straight into coding the logic?
+
 * Ask the candidate to ensure the program always accepts one argument. You are looking for a TDD approach here, write the test for zero arguments and ensure it writes out some text to the console instead e.g. "Please pass only one argument". They should write 2 tests:
   * test 0 args
   * test 2 args
