@@ -12,6 +12,10 @@
                 {
                     result += "Foo";
                 }
+                else if (i % 5 == 0)
+                {
+                    result += "Bar";
+                }
                 else
                 {
                     result += i.ToString();

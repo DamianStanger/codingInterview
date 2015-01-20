@@ -23,11 +23,21 @@ namespace FooBar.Test.FooBar.Application
         }
 
         [Test]
-        public void ShouldSubstituteFooForMultiplesOfThree()
+        public void ShouldSubstituteBarForFive()
         {
             var result = new FooBarCalculator().Calculate();
 
-            Assert.AreEqual("1 2 Foo 4 5 Foo 7 8 Foo 10", result);
+            Assert.AreEqual("4 Bar", result.Substring(8, 5));
         }
+
+        [Test]
+        public void ShouldSubstituteFooForMultiplesOfThreeAndFive()
+        {
+            var result = new FooBarCalculator().Calculate();
+
+            Assert.AreEqual("1 2 Foo 4 Bar Foo 7 8 Foo Bar", result);
+        }
+
+     
     }
 }
