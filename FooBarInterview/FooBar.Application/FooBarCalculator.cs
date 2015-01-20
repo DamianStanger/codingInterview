@@ -2,11 +2,11 @@
 {
     public class FooBarCalculator
     {
-        public string Calculate()
+        public virtual string Calculate(int start, int end)
         {
             var result = string.Empty;
 
-            for (var i = 1; i <= 10; i++)
+            for (var i = start; i <= end; i++)
             {
                 if (i%3==0)
                 {
@@ -25,5 +25,6 @@
 
             return result.Trim();
         }
+
     }
 }

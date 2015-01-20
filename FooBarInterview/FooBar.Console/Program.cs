@@ -1,10 +1,13 @@
-﻿namespace FooBar.Console
+﻿using FooBar.Application;
+
+namespace FooBar.Console
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
-            new FooBarGameRunner().Run();
+            new FooBarGameRunner(new FooBarCalculator()).Run(args);
+            System.Console.ReadKey();
         }
     }
 }

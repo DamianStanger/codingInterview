@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1409.1722\lib\net40\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
@@ -44,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FooBar.Application\FooBarCalculatorTests.cs" />
+    <Compile Include="FooBar.Console\FooBarGameRunnerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,6 +57,10 @@
     <ProjectReference Include="..\FooBar.Application\FooBar.Application.csproj">
       <Project>{3B23238E-0227-4FC0-B197-B6C31443A323}</Project>
       <Name>FooBar.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FooBar.Console\FooBar.Console.csproj">
+      <Project>{2132D8AB-1F89-43B1-A4F2-7CAB185DA103}</Project>
+      <Name>FooBar.Console</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

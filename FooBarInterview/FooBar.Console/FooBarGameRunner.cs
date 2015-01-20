@@ -4,11 +4,21 @@ namespace FooBar.Console
 {
     public class FooBarGameRunner
     {
-        public void Run()
+        private readonly FooBarCalculator _fooBarCalculator;
+
+        public FooBarGameRunner(FooBarCalculator fooBarCalculator)
         {
-            var result = new FooBarCalculator().Calculate();
+            _fooBarCalculator = fooBarCalculator;
+        }
+
+        public void Run(string[] args)
+        {
+            int start = int.Parse(args[0]);
+            int end = int.Parse(args[1]);
+
+            var result = _fooBarCalculator.Calculate(start, end);
+
             System.Console.Out.WriteLine(result);
-            System.Console.ReadKey();
         }
     }
 }
