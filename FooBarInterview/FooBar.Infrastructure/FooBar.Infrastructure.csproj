@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{43DE693B-CB0F-406B-8BF4-C905D8E5E578}</ProjectGuid>
+    <ProjectGuid>{3159FC5A-7E71-47F2-BDC0-05C2051E4FAD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FooBar.Test</RootNamespace>
-    <AssemblyName>FooBar.Test</AssemblyName>
+    <RootNamespace>FooBar.Infrastructure</RootNamespace>
+    <AssemblyName>FooBar.Infrastructure</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,13 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Moq">
-      <HintPath>..\packages\Moq.4.2.1409.1722\lib\net40\Moq.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,26 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FooBar.Application\FooBarCalculatorTests.cs" />
-    <Compile Include="FooBar.Console\FooBarGameRunnerTests.cs" />
+    <Compile Include="FooBarLogger.cs" />
+    <Compile Include="IFooBarLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FooBar.Application\FooBar.Application.csproj">
-      <Project>{3B23238E-0227-4FC0-B197-B6C31443A323}</Project>
-      <Name>FooBar.Application</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FooBar.Console\FooBar.Console.csproj">
-      <Project>{2132D8AB-1F89-43B1-A4F2-7CAB185DA103}</Project>
-      <Name>FooBar.Console</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FooBar.Infrastructure\FooBar.Infrastructure.csproj">
-      <Project>{3159FC5A-7E71-47F2-BDC0-05C2051E4FAD}</Project>
-      <Name>FooBar.Infrastructure</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

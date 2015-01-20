@@ -54,6 +54,10 @@
       <Project>{3B23238E-0227-4FC0-B197-B6C31443A323}</Project>
       <Name>FooBar.Application</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FooBar.Infrastructure\FooBar.Infrastructure.csproj">
+      <Project>{3159fc5a-7e71-47f2-bdc0-05c2051e4fad}</Project>
+      <Name>FooBar.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

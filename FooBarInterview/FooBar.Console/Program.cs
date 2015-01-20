@@ -1,4 +1,5 @@
 ﻿using FooBar.Application;
+using FooBar.Infrastructure;
 
 namespace FooBar.Console
 {
@@ -6,7 +7,7 @@ namespace FooBar.Console
     {
         static void Main(string[] args)
         {
-            var result = new FooBarGameRunner(new FooBarCalculator()).Run(args);
+            var result = new FooBarGameRunner(new FooBarCalculator(), new FooBarLogger()).Run(args);
 
             System.Console.Out.WriteLine(result);
             System.Console.ReadKey();

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FooBar.Application", "FooBa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FooBar.Test", "FooBar.Test\FooBar.Test.csproj", "{43DE693B-CB0F-406B-8BF4-C905D8E5E578}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FooBar.Infrastructure", "FooBar.Infrastructure\FooBar.Infrastructure.csproj", "{3159FC5A-7E71-47F2-BDC0-05C2051E4FAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{43DE693B-CB0F-406B-8BF4-C905D8E5E578}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43DE693B-CB0F-406B-8BF4-C905D8E5E578}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43DE693B-CB0F-406B-8BF4-C905D8E5E578}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3159FC5A-7E71-47F2-BDC0-05C2051E4FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3159FC5A-7E71-47F2-BDC0-05C2051E4FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3159FC5A-7E71-47F2-BDC0-05C2051E4FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3159FC5A-7E71-47F2-BDC0-05C2051E4FAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,18 +1,23 @@
 ﻿using FooBar.Application;
+using FooBar.Infrastructure;
 
 namespace FooBar.Console
 {
     public class FooBarGameRunner
     {
         private readonly FooBarCalculator _fooBarCalculator;
+        private readonly IFooBarLogger _fooBarLogger;
 
-        public FooBarGameRunner(FooBarCalculator fooBarCalculator)
+        public FooBarGameRunner(FooBarCalculator fooBarCalculator, IFooBarLogger fooBarLogger)
         {
             _fooBarCalculator = fooBarCalculator;
+            _fooBarLogger = fooBarLogger;
         }
 
         public string Run(string[] args)
         {
+            _fooBarLogger.Log(args);
+
             int start;
             int end;
 
