@@ -11,14 +11,21 @@ namespace FooBar.Console
             _fooBarCalculator = fooBarCalculator;
         }
 
-        public void Run(string[] args)
+        public string Run(string[] args)
         {
-            int start = int.Parse(args[0]);
-            int end = int.Parse(args[1]);
+            int start;
+            int end;
 
-            var result = _fooBarCalculator.Calculate(start, end);
+            if (args.Length!=2)
+            {
+                return string.Format("'' Is not valid. Please enter two numbers between 0 and 100");
+            }
+            if (!int.TryParse(args[0], out start) | !int.TryParse(args[1], out end) || start < 1 || end < 1 || start > 100 || end > 100)
+            {
+                return string.Format("'{0} {1}' Is not valid. Please enter two numbers between 0 and 100", args[0], args[1]);
+            }
 
-            System.Console.Out.WriteLine(result);
+            return _fooBarCalculator.Calculate(start, end);
         }
     }
 }

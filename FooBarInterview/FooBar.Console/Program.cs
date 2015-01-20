@@ -6,7 +6,9 @@ namespace FooBar.Console
     {
         static void Main(string[] args)
         {
-            new FooBarGameRunner(new FooBarCalculator()).Run(args);
+            var result = new FooBarGameRunner(new FooBarCalculator()).Run(args);
+
+            System.Console.Out.WriteLine(result);
             System.Console.ReadKey();
         }
     }
