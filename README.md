@@ -2,6 +2,9 @@
 
 .net solutions designed to be a basis for code interviews
 
+## FooBar children's game (Basic C#) ##
+Based on Fizz Buzz below but with a new name so that people dont have Fizz Buzz baggage, and it makes it more difficult to google for solutions if given off line. The difference is that its structured more story like and will evolve and hopefully promote more testing. maybe. see my quick solution here: [DamoFooBar](https://github.com/DamianStanger/codingInterview/tree/DamoFooBar/FooBarInterview) Details and stories can be found in the separate readme.md
+
 ## Shapes Interview (Basic C#) ##
 This solution is designed to test very basic knowledge of C#. It does use unit tests using nunit, but the candidate does not really need to know about unit testing or nunit to do this.
 
