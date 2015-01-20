@@ -8,7 +8,11 @@
 
             for (var i = start; i <= end; i++)
             {
-                if (i%3==0)
+                if (i % 15 == 0)
+                {
+                    result += "FooBar";
+                }
+                else if (i%3==0)
                 {
                     result += "Foo";
                 }

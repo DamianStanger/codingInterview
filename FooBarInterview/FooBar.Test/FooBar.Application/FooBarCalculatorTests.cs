@@ -17,25 +17,33 @@ namespace FooBar.Test.FooBar.Application
         [Test]
         public void ShouldSubstituteFooForThree()
         {
-            var result = new FooBarCalculator().Calculate(1,4);
+            var result = new FooBarCalculator().Calculate(3,3);
 
-            Assert.AreEqual("1 2 Foo 4", result);
+            Assert.AreEqual("Foo", result);
         }
 
         [Test]
         public void ShouldSubstituteBarForFive()
         {
-            var result = new FooBarCalculator().Calculate(4,5);
+            var result = new FooBarCalculator().Calculate(5,5);
 
-            Assert.AreEqual("4 Bar", result);
+            Assert.AreEqual("Bar", result);
         }
 
         [Test]
-        public void ShouldSubstituteFooForMultiplesOfThreeAndFive()
+        public void ShouldSubstituteFooBarForFifteen()
         {
-            var result = new FooBarCalculator().Calculate(1,10);
+            var result = new FooBarCalculator().Calculate(15, 15);
 
-            Assert.AreEqual("1 2 Foo 4 Bar Foo 7 8 Foo Bar", result);
+            Assert.AreEqual("FooBar", result);
+        }
+
+        [Test]
+        public void ShouldSubstituteForMultiplesOfThreeAndFiveAndFifteen()
+        {
+            var result = new FooBarCalculator().Calculate(1,30);
+
+            Assert.AreEqual("1 2 Foo 4 Bar Foo 7 8 Foo Bar 11 Foo 13 14 FooBar 16 17 Foo 19 Bar Foo 22 23 Foo Bar 26 Foo 28 29 FooBar", result);
         }
 
      
