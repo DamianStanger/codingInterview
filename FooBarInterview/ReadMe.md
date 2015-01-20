@@ -15,6 +15,8 @@ Allow the user to pick the starting and finishing numbers
 ##Advanced Rules
 3. Substitute "FooBar" For all the numbers divisible by 3 and 5
 
+
+
 ---
 
 ##New game feature 2.
@@ -22,7 +24,7 @@ We are finding that many children are not entering numbers but instead text garb
 ```
 "'<??>' Is not valid. Please enter two numbers between 0 and 100"
 ```
-where <??> Is the original input. The user will then be re-prompted for another number.
+where <??> Is the original input.
     
 ---
 
