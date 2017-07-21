@@ -19,9 +19,6 @@ I implemented FizzBuzz Twice:
  * [damoFizzbuzzquick](https://github.com/DamianStanger/codingInterview/tree/damoFizzbuzzquick) quick and basic method
  * [DamoFizzBuzz](https://github.com/DamianStanger/codingInterview/tree/DamoFizzBuzz) *Warning, test driven development overkill*
 
-## Basic Node Fizz Buzz example walk through notes for the interviewer ##
-This starts from nothing, what is contained here is interview notes and a sample solution
-
 ### Some good follow up questions: ###
 * Ask what might go wrong with their solution, for example bad arguments, any exceptions you can see in their logic
 
@@ -39,3 +36,8 @@ This starts from nothing, what is contained here is interview notes and a sample
 
 ### Advanced follow up: ###
  * Scenario: Every time the program is run it is to write the resulting string to a data base. We are not going to write the DB code yet (another team is writing that), we need to write a test that ensures a call to the DB is made through an interface with the correct data, they can use a mocking framework if they like, or a test double, its upto them. But do they know what to do? and can they do real TDD?
+
+
+
+## Fizz Buzz (Node) example walk through notes for the interviewer ##
+This starts from nothing, what is contained here is interview notes and a sample solution

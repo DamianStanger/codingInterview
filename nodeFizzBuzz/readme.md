@@ -13,7 +13,10 @@
     
     b. Give hint - Use mod operator if unsure (x%3===0)
     
-6. Write a test for it
+6. Check in solution so far
+7. Create a branch for tests
+    
+8. Write a test for it
 
     a. Ask them to install with npm test packages of choice and use them
     
@@ -34,3 +37,7 @@
         > node_modules/lab/bin/lab test.js
         
     d. They will need to use module.exports
+    
+9. commit and merge branch back into master
+
+    a. Question: Whats the difference between a merge and a rebase
