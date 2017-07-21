@@ -1,0 +1,15 @@
+{
+  "name": "fizzbuzz",
+  "version": "1.0.0",
+  "description": "1. Initialise a new project with npm 2. Initialise a git repo for the project 3. Write a program to echo out 1 to 10  4. Extend program to get max number from the command line",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "code": "^4.1.0",
+    "lab": "^14.1.1"
+  }
+}

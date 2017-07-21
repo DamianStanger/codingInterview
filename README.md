@@ -1,6 +1,6 @@
 # Coding Interview Frameworks #
 
-.net solutions designed to be a basis for code interviews
+solutions designed to be a basis for code interviews
 
 ## FooBar children's game (Basic C#) ##
 Based on Fizz Buzz below but with a new name so that people dont have Fizz Buzz baggage, and it makes it more difficult to google for solutions if given off line. The difference is that its structured more story like and will evolve and hopefully promote more testing. maybe. see my quick solution here: [DamoFooBar](https://github.com/DamianStanger/codingInterview/tree/DamoFooBar/FooBarInterview) Details and stories can be found in the separate readme.md
@@ -18,6 +18,9 @@ Rules of Fizz Buzz are here: [https://en.wikipedia.org/wiki/Bizz_buzz](https://e
 I implemented FizzBuzz Twice:
  * [damoFizzbuzzquick](https://github.com/DamianStanger/codingInterview/tree/damoFizzbuzzquick) quick and basic method
  * [DamoFizzBuzz](https://github.com/DamianStanger/codingInterview/tree/DamoFizzBuzz) *Warning, test driven development overkill*
+
+## Basic Node Fizz Buzz example walk through notes for the interviewer ##
+This starts from nothing, what is contained here is interview notes and a sample solution
 
 ### Some good follow up questions: ###
 * Ask what might go wrong with their solution, for example bad arguments, any exceptions you can see in their logic
